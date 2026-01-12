@@ -1,19 +1,15 @@
 def factorial(n):
- if n==0 or 1:
-  return 1\
-  #recursive case:n!=n*(n-1)!
- else:
-  return n*(n-1)
-number=int(input("enter a number:"))
-if number<0:
- 
-    print("/nError:factorial is not defined for negative numbers")
+
+# Base case: Factorial of 0 or 1 is 1
+  if n == 0 or n == 1:
+   return 1
+# Recursive case: n! = n * (n-1)!
+  else:
+   return n * factorial(n - 1)
+# Example usage:
+number = int(input("Enter a number:"))
+if number < 0:
+ print("\nError: Factorial is not defined for negative numbers.")
 else:
-        result=factorial(number)
-        print(f"\nThe factorial of{number} is {result}")
-
-
-
-
-
-
+ result = factorial(number)
+print(f"\nThe factorial of {number} is {result}")
